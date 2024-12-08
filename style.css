@@ -1,0 +1,137 @@
+body{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.loader{
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+}
+#loader1{
+    border: 10px solid wheat;
+    border-top: 10px solid black;
+    animation: spin 1.2s linear infinite;
+    border-radius: 50px;
+  
+}
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+#loader2{
+  background-color: black;
+  border-radius: 50%;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.4);
+  }
+  50%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0.4);
+  }
+}
+#loader3{
+  background-color: black;
+  border-radius: 50%;
+  animation: bounce 1.2s ease-in infinite;
+}
+@keyframes bounce{
+  0% , 100%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-120px);
+  }
+}
+#loader4{
+  display: flex;
+  justify-content: space-around;
+}
+#loader4::before , #loader4::after{
+  content: '';
+  width: 8px;
+  height: 100%;
+  background-color: black;
+  animation: stretch 1.2s ease infinite;
+}
+#loader4::after{
+  animation-delay: 0.5s;
+}
+@keyframes stretch{
+  0%,40%,100%{
+    transform: scaleY(0.2);
+  }
+  20%{
+    transform: scaleY(0.5);
+  }
+}
+#loader5{
+  display: flex;
+  justify-content: space-around;
+}
+#loader5::before , #loader5::after{
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  animation: dot 1.2s ease-in-out infinite;
+  border-radius: 50%;
+}
+#loader5::after{
+  animation-delay: 0.8s;
+}
+@keyframes dot{
+  0% , 50%, 100%{
+    transform: scale(0.4);
+  }
+  20%,80%{
+    transform: scale(1.5);
+  }
+}
+#loader6{
+ border: 8px solid transparent;
+  border-radius: 50%;
+
+  border-bottom: 8px solid black;
+  border-top: 8px solid black;
+  animation: fade 1.2s ease infinite;
+}
+@keyframes fade{
+  0% , 100%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+}
+/*...............famous loader............... */
+
+#loader7{
+  width: 60px;
+  height: 60px;
+  border: 8px solid black;
+  border-top: 8px solid transparent;
+  animation: dual-ring 1.5s linear infinite;
+  border-radius: 50%;
+}
+@keyframes dual-ring {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
